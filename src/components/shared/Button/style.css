@@ -1,0 +1,19 @@
+.button {
+  border: none;
+  outline: none;
+  border-radius: 0.4em;
+  min-width: 100px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button--pdsmall {
+  padding: 10px;
+}
+
+.button--primary {
+  color: white;
+  background-color: #76b0f4;
+}
