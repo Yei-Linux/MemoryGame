@@ -13,6 +13,11 @@
   padding: 10px;
 }
 
+.button--disable {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
 .button--primary {
   color: white;
   background-color: #76b0f4;

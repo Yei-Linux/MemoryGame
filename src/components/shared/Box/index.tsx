@@ -4,6 +4,7 @@ import { TStyles } from "../../../types/interfaces";
 import styles from "./style.css";
 
 interface IBox {
+  onClick?: () => void;
   background?: string;
   minWidth?: string;
   minHeight?: string;
@@ -13,6 +14,7 @@ interface IBox {
 type TBox = IBox & TStyles;
 
 const Box = ({
+  onClick,
   background,
   minWidth,
   minHeight,
@@ -30,7 +32,11 @@ const Box = ({
   const cx = classNames.bind(styles);
 
   return (
-    <div style={customCss} className={classNames(className, cx("box"))}>
+    <div
+      onClick={onClick}
+      style={customCss}
+      className={classNames(className, cx("box"))}
+    >
       {children}
     </div>
   );

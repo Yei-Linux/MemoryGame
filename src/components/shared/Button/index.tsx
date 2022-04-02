@@ -8,11 +8,18 @@ type TOnClick = () => void;
 export interface IButton {
   onClick?: TOnClick;
   children: React.ReactNode;
+  disable?: boolean;
 }
 
 type TButton = IButton & TStyles;
 
-const Button = ({ children, onClick, css, className }: TButton) => {
+const Button = ({
+  children,
+  onClick,
+  disable = false,
+  css,
+  className,
+}: TButton) => {
   const cx = classNames.bind(styles);
 
   return (
@@ -20,7 +27,9 @@ const Button = ({ children, onClick, css, className }: TButton) => {
       style={css}
       className={classNames(
         className,
-        cx("button", "button--primary", "button--pdsmall")
+        cx("button", "button--primary", "button--pdsmall", {
+          "button--disable": disable,
+        })
       )}
       onClick={onClick}
     >
