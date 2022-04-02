@@ -1,5 +1,12 @@
-.memorygame__actions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.memorygame__box {
+  color: white;
+}
+.memorygame__box--primary {
+  background-color: #85c88a;
+}
+.memorygame__box--active {
+  background-color: #ebd671;
+}
+.memorygame__box:hover {
+  background-color: #ebd671;
 }

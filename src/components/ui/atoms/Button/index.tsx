@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import React from "react";
 import styles from "./style.css";
-import { TStyles } from "../../../types/interfaces";
+import { TStyles } from "../../../../types/interfaces";
 
 type TOnClick = () => void;
 
@@ -27,7 +27,7 @@ const Button = ({
       style={css}
       className={classNames(
         className,
-        cx("button", "button--primary", "button--pdsmall", {
+        cx("button", "button--primary", "button--pd1", {
           "button--disable": disable,
         })
       )}

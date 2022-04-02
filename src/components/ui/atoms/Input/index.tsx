@@ -1,5 +1,5 @@
 import React from "react";
-import { TStyles } from "../../../types/interfaces";
+import { TStyles } from "../../../../types/interfaces";
 
 export interface IInput {
   name: string;

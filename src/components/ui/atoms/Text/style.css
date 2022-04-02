@@ -1,0 +1,35 @@
+.text--weight1 {
+  font-weight: 100;
+}
+.text--weight2 {
+  font-weight: 200;
+}
+.text--weight3 {
+  font-weight: 300;
+}
+.text--weight4 {
+  font-weight: 400;
+}
+.text--weight5 {
+  font-weight: 500;
+}
+.text--weight6 {
+  font-weight: 600;
+}
+.text--weight7 {
+  font-weight: 700;
+}
+.text--weight8 {
+  font-weight: 800;
+}
+.text--weight9 {
+  font-weight: 900;
+}
+
+.text--pd0 {
+  padding: 0;
+}
+
+.text--pd1 {
+  padding: 10px;
+}

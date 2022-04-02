@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import React from "react";
-import { TStyles } from "../../../types/interfaces";
+import { TStyles } from "../../../../types/interfaces";
 import styles from "./style.css";
 
 interface IBox {
