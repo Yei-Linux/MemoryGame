@@ -6,12 +6,17 @@ import Modal from "../ui/molecules/Modal";
 export interface IWelcomeStart {}
 
 const WelcomeStart = () => {
-  const [visibleWelcomeForm] = useState(true);
+  const [visibleWelcomeForm,setVisibleWelcomeForm] = useState(true);
+
+  const handleSubmit = (values) => {
+    setVisibleWelcomeForm(false)
+  }
+
   return (
     <div>
       <Modal isVisible={visibleWelcomeForm}>
         <Modal.Body>
-          <Form elements={formWelcomeElements} buttonText="Start" />
+          <Form onSubmit={handleSubmit} elements={formWelcomeElements} buttonText="Start" />
         </Modal.Body>
       </Modal>
     </div>

@@ -25,7 +25,13 @@ const ModalBody = ({ children }: IModalBody) => {
 const Modal = ({ children, isVisible }: IModal) => {
   return (
     <Container
-      className={classNames(cx("modal__mask", "modal__mask--primary"))}
+      className={classNames(
+        cx(
+          "modal__mask",
+          "modal__mask--primary",
+          `modal__mask--${isVisible ? "visible" : "hidden"}`
+        )
+      )}
     >
       <Container
         className={classNames(

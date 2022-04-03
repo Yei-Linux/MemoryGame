@@ -1,8 +1,25 @@
+@keyframes visibleelement {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes hideelement {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
 .modal {
   min-width: 300px;
   min-height: 200px;
   border-radius: 10px;
-  transition: all 0.3s;
+  transition: all 1.3s;
 
   position: absolute;
 }
@@ -13,6 +30,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  transition: all 1.3s;
 
   display: flex;
   justify-content: center;
@@ -23,10 +41,14 @@
   background-color: #c1d8d9a3;
 }
 
-.modal--visible {
+.modal--visible,
+.modal__mask--visible {
+  animation: visibleelement 0s 1.3s forwards;
   opacity: 1;
 }
-.modal--hidden {
+.modal--hidden,
+.modal__mask--hidden {
+  animation: hideelement 0s 1.3s forwards;
   opacity: 0;
 }
 
@@ -43,6 +65,13 @@
 }
 
 .modal__body {
+  height: 100%;
+  width: 100%;
+}
+
+.modal , .modal__body {
+  display: grid;
+  place-items: center;
 }
 
 .modal__body--pd0 {

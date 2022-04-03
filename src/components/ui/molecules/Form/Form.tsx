@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import React, { FormEvent, useContext, useEffect } from "react";
 import WithContextStore from "../../../../hocs/WithContextStore";
 import { formContext } from "../../../../store/context";
@@ -6,6 +7,12 @@ import Button from "../../atoms/Button";
 import Input, { TInput } from "../../atoms/Input";
 import Select, { TSelect } from "../../atoms/Select";
 import Container from "../../layouts/Container";
+
+import styles from "./style.css";
+import indexStyles from "../../../../styles/index.css";
+
+const cx = classNames.bind(styles);
+const indexCx = classNames.bind(indexStyles);
 
 export interface IFormItem {
   onChange?: (e: unknown) => void;
@@ -75,13 +82,17 @@ const Form = ({ elements, buttonText, onSubmit }: IForm) => {
   }, []);
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={classNames(cx("form"))} onSubmit={handleSubmit}>
       {elements.map(({ type, item }) => (
         <FormItem key={item.name} type={type} item={item} />
       ))}
 
       {hasSubmitButton && (
-        <Container>
+        <Container
+          className={classNames(
+            indexCx("flex", "justify-center", "items-center")
+          )}
+        >
           <Button type="submit">{buttonText}</Button>
         </Container>
       )}
