@@ -1,0 +1,50 @@
+.modal {
+  min-width: 300px;
+  min-height: 200px;
+  border-radius: 10px;
+  transition: all 0.3s;
+
+  position: absolute;
+}
+
+.modal__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__mask--primary {
+  background-color: #c1d8d9a3;
+}
+
+.modal--visible {
+  opacity: 1;
+}
+.modal--hidden {
+  opacity: 0;
+}
+
+.modal--light {
+  background-color: white;
+}
+
+.modal--pd0 {
+  padding: 0;
+}
+
+.modal--pd1 {
+  padding: 10px;
+}
+
+.modal__body {
+}
+
+.modal__body--pd0 {
+  padding: 0;
+}

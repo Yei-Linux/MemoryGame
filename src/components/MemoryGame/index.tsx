@@ -57,6 +57,7 @@ const MemoryGame = () => {
             index
           ) => (
             <ItemBox
+              key={`${gridColumnStart}/${gridColumnEnd}/${gridRowStart}/${gridRowEnd}`}
               validateMemoizedPath={validateMemoizedPath}
               pathLevel={pathLevel}
               currentBoxLight={currentBoxLight}

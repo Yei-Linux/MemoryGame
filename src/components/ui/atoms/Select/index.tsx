@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import React from "react";
 import { TStyles } from "../../../../types/interfaces";
-import { IFormItem } from "../../molecules/Form";
+import { IFormItem } from "../../molecules/Form/Form";
 import styles from "./style.css";
 
 interface IOption {
@@ -19,6 +19,8 @@ const Select = ({
   options,
   name,
   defaultValue,
+  onChange,
+  padding = 1,
   placeholder,
   css,
   className,
@@ -27,14 +29,15 @@ const Select = ({
 
   return (
     <select
+      onChange={onChange}
       placeholder={placeholder}
       style={css}
-      className={classNames(className, cx("select"))}
+      className={classNames(className, cx("select", `select--pd${padding}`))}
       name={name}
       value={defaultValue}
     >
       {options.map(({ value, label }) => (
-        <option value={value}>{label}</option>
+        <option key={value} value={value}>{label}</option>
       ))}
     </select>
   );
