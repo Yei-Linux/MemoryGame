@@ -1,15 +1,25 @@
+import classNames from "classnames";
 import React from "react";
 import { TStyles } from "../../../../types/interfaces";
+import { IFormItem } from "../../molecules/Form";
+import styles from "./style.css";
 
-export interface IInput {
-  name: string;
-  defaultValue?: string;
-}
+export interface IInput {}
 
-type TInput = IInput & TStyles;
+export type TInput = IInput & IFormItem & TStyles;
 
-const Input = ({ name, defaultValue }: TInput) => {
-  return <input name={name} value={defaultValue} />;
+const Input = ({ name, defaultValue, placeholder, css, className }: TInput) => {
+  const cx = classNames.bind(styles);
+
+  return (
+    <input
+      placeholder={placeholder}
+      style={css}
+      className={classNames(className, cx("input"))}
+      name={name}
+      value={defaultValue}
+    />
+  );
 };
 
 export default Input;

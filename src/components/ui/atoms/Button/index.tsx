@@ -9,6 +9,7 @@ export interface IButton {
   onClick?: TOnClick;
   children: React.ReactNode;
   disable?: boolean;
+  type?: "button" | "submit";
 }
 
 type TButton = IButton & TStyles;
@@ -17,6 +18,7 @@ const Button = ({
   children,
   onClick,
   disable = false,
+  type = "button",
   css,
   className,
 }: TButton) => {
@@ -24,6 +26,7 @@ const Button = ({
 
   return (
     <button
+      type={type}
       style={css}
       className={classNames(
         className,
