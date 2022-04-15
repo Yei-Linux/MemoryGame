@@ -36,7 +36,10 @@ const FormItem = ({ type, label, item }: IElement) => {
   return (
     <Container>
       {label && (
-        <Label className={classNames(cx("formitem__label"))} text={label} />
+        <Label
+          className={classNames(cx("formitem__label"))}
+          text={`${label}:`}
+        />
       )}
       <Element
         {...item}

@@ -25,6 +25,7 @@ const Input = ({
 
   return (
     <input
+      autoComplete="off"
       onChange={onChange}
       placeholder={placeholder}
       style={css}

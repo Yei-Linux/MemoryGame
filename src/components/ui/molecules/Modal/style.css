@@ -38,7 +38,7 @@
 }
 
 .modal__mask--primary {
-  background-color: #c1d8d9a3;
+  background-color: var(--bg-light-primary);
 }
 
 .modal--visible,
@@ -69,11 +69,20 @@
   width: 100%;
 }
 
-.modal , .modal__body {
-  display: grid;
-  place-items: center;
-}
-
 .modal__body--pd0 {
   padding: 0;
+}
+
+.modal__header {
+  width: 100%;
+}
+.modal__header--pd0 {
+  padding: 0;
+}
+
+.modal,
+.modal__body,
+.modal__header {
+  display: grid;
+  place-items: center;
 }

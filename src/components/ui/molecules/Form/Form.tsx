@@ -59,7 +59,9 @@ const Form = ({ elements, buttonText, onSubmit }: IForm) => {
             indexCx("flex", "justify-center", "items-center")
           )}
         >
-          <Button type="submit">{buttonText}</Button>
+          <Button variation="bdprimary" type="submit">
+            {buttonText}
+          </Button>
         </Container>
       )}
     </form>

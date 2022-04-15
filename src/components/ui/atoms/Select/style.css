@@ -21,3 +21,8 @@
 .select:hover {
   cursor: pointer;
 }
+
+.select:focus {
+  transition: all 0.3s;
+  border: 1px solid var(--bg-primary);
+}

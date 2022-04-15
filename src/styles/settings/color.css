@@ -1,5 +1,8 @@
 :root {
-    --bg-neutral-0: #ffffff;
-    --bg-neutral-1: #fffdfd;
-    --bg-neutral-8: #dddcdc;
+  --bg-neutral-0: #ffffff;
+  --bg-neutral-1: #fffdfd;
+  --bg-neutral-8: #dddcdc;
+
+  --bg-primary: #76b0f4;
+  --bg-light-primary: #76b0f478;
 }

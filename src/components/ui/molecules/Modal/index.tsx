@@ -12,11 +12,25 @@ interface IModalBody {
   children: React.ReactNode;
 }
 
+interface IModalHeader {
+  children: React.ReactNode;
+}
+
 const cx = classNames.bind(styles);
 
 const ModalBody = ({ children }: IModalBody) => {
   return (
     <Container className={classNames(cx("modal__body", "modal__body--pd0"))}>
+      {children}
+    </Container>
+  );
+};
+
+const ModalHeader = ({ children }: IModalHeader) => {
+  return (
+    <Container
+      className={classNames(cx("modal__header", "modal__header--pd0"))}
+    >
       {children}
     </Container>
   );
@@ -50,5 +64,6 @@ const Modal = ({ children, isVisible }: IModal) => {
 };
 
 Modal.Body = ModalBody;
+Modal.Header = ModalHeader;
 
 export default Modal;

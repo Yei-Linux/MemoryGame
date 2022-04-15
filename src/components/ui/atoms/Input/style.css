@@ -17,3 +17,8 @@
   background-color: var(--bg-neutral-1);
   border: 1px solid var(--bg-neutral-8);
 }
+
+.input:focus {
+  transition: all 0.3s;
+  border: 1px solid var(--bg-primary);
+}

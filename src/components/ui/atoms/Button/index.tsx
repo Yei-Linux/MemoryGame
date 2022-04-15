@@ -6,6 +6,7 @@ import { TStyles } from "../../../../types/interfaces";
 type TOnClick = () => void;
 
 export interface IButton {
+  variation?: "primary" | "bdprimary";
   onClick?: TOnClick;
   children: React.ReactNode;
   disable?: boolean;
@@ -15,6 +16,7 @@ export interface IButton {
 type TButton = IButton & TStyles;
 
 const Button = ({
+  variation = "primary",
   children,
   onClick,
   disable = false,
@@ -30,7 +32,7 @@ const Button = ({
       style={css}
       className={classNames(
         className,
-        cx("button", "button--primary", "button--pd1", {
+        cx("button", `button--${variation}`, "button--pd1", {
           "button--disable": disable,
         })
       )}
