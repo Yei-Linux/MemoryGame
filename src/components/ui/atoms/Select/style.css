@@ -5,6 +5,11 @@
   width: 100%;
 }
 
+.select--primary {
+  background-color: var(--bg-neutral-1);
+  border: 1px solid var(--bg-neutral-8);
+}
+
 .select--pd0 {
   padding: 0;
 }

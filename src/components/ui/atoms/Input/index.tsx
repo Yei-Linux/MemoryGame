@@ -4,17 +4,22 @@ import { TStyles } from "../../../../types/interfaces";
 import { IFormItem } from "../../molecules/Form/Form";
 import styles from "./style.css";
 
-export interface IInput {}
+export interface IInput {
+  variation: "primary" | "secondary" | "error" | "success";
+}
 
 export type TInput = IInput & IFormItem & TStyles;
 
 const Input = ({
+  variation = "primary",
   name,
   defaultValue,
   onChange,
   placeholder,
   css,
   className,
+  border = 1,
+  padding = 1,
 }: TInput) => {
   const cx = classNames.bind(styles);
 
@@ -23,7 +28,15 @@ const Input = ({
       onChange={onChange}
       placeholder={placeholder}
       style={css}
-      className={classNames(className, cx("input"))}
+      className={classNames(
+        className,
+        cx(
+          "input",
+          `input--${variation}`,
+          `input--border${border}`,
+          `input--pd${padding}`
+        )
+      )}
       name={name}
       value={defaultValue}
     />

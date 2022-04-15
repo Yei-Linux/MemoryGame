@@ -6,6 +6,7 @@ type TWeight = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 type TDesignTokens = {
   padding?: TSpacer;
   margin?: TSpacer;
+  border?: TSpacer;
   weight?: TWeight
 };
 

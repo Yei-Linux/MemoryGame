@@ -1,5 +1,6 @@
 export const formWelcomeElements = [
   {
+    label: "Avatar",
     type: "input" as const,
     item: {
       placeholder: "What will be your avatar?",
@@ -8,6 +9,7 @@ export const formWelcomeElements = [
     },
   },
   {
+    label: "Game Types",
     type: "select" as const,
     item: {
       placeholder: "What kind of game do you like yo play?",

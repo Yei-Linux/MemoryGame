@@ -10,12 +10,14 @@ interface IOption {
 }
 
 export interface ISelect {
+  variation?: "primary";
   options?: IOption[];
 }
 
 export type TSelect = ISelect & IFormItem & TStyles;
 
 const Select = ({
+  variation = "primary",
   options,
   name,
   defaultValue,
@@ -32,12 +34,17 @@ const Select = ({
       onChange={onChange}
       placeholder={placeholder}
       style={css}
-      className={classNames(className, cx("select", `select--pd${padding}`))}
+      className={classNames(
+        className,
+        cx("select", `select--pd${padding}`, `select--${variation}`)
+      )}
       name={name}
       value={defaultValue}
     >
       {options.map(({ value, label }) => (
-        <option key={value} value={value}>{label}</option>
+        <option key={value} value={value}>
+          {label}
+        </option>
       ))}
     </select>
   );

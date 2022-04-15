@@ -1,0 +1,14 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body,
+input,
+select,
+option,
+button {
+  font-family: "Mali", cursive;
+}
