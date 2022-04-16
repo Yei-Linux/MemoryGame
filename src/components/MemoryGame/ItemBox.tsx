@@ -29,15 +29,17 @@ const ItemBox = ({
   return (
     <Box
       className={classNames(
-        cx("memorygame__box", {
-          "memorygame__box--primary": !isActiveBoxItem,
+        "flex",
+        "justify-center",
+        "items-center",
+        cx("memorygame__box", "memorygame__box--primary", {
           "memorygame__box--active": isActiveBoxItem,
         })
       )}
       onClick={validateMemoizedPath.bind(this, boxItem, pathLevel)}
       key={index}
-      minWidth="50px"
-      minHeight="50px"
+      minWidth="90px"
+      minHeight="100px"
       css={boxItem}
     >
       {index}

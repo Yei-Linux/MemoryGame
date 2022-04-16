@@ -7,11 +7,12 @@ export interface IGrid {
   children: React.ReactNode;
   cols: number;
   rows: number;
+  gap?: 0 | 1 | 2;
 }
 
 type TGrid = IGrid & TStyles;
 
-const Grid = ({ children, css, className, cols, rows }: TGrid) => {
+const Grid = ({ children, css, className, cols, rows, gap = 1 }: TGrid) => {
   const cx = classNames.bind(styles);
   const gridStyle: React.CSSProperties = {
     gridTemplateColumns: `repeat(${cols},1fr)`,
@@ -20,7 +21,10 @@ const Grid = ({ children, css, className, cols, rows }: TGrid) => {
   };
 
   return (
-    <div style={gridStyle} className={classNames(className, cx("grid"))}>
+    <div
+      style={gridStyle}
+      className={classNames(className, cx("grid", `grid--gap${gap}`))}
+    >
       {children}
     </div>
   );

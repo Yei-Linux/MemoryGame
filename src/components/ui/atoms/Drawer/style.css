@@ -1,8 +1,27 @@
 .drawer {
   height: 100%;
+  width: 450px;
+
+  position: fixed;
+  background-color: var(--bg-neutral-0);
 }
 
 .drawer--left {
+  left: -450px;
+  transition: left 0.3s;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
 }
+.drawer--left--open {
+  left: 0px;
+}
+
 .drawer--right {
+  right: -450px;
+  transition: right 0.3s;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+.drawer--right--open {
+  right: 0px;
 }

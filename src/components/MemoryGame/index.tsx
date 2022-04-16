@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import React from "react";
 import { levels } from "../../constants/game";
+import Text from "../ui/atoms/Text";
 import Button from "../ui/atoms/Button";
 import Grid from "../ui/layouts/Grid";
 import Container from "../ui/layouts/Container";
@@ -45,6 +46,12 @@ const MemoryGame = () => {
 
   return (
     <Container>
+      <Container>
+        <Text weight={7} as="h2">
+          🌱 Do you want to try win this game?
+        </Text>
+      </Container>
+
       <ProgressInformation
         isPlaying={isPlaying}
         statusGame={statusGame}

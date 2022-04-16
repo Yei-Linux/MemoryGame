@@ -1,12 +1,22 @@
 .memorygame__box {
   color: white;
+  transition: box-shadow 0.3s;
+  font-size: 1.3em;
+
+  -webkit-box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.55);
+  box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.55);
 }
 .memorygame__box--primary {
-  background-color: #85c88a;
+  background: linear-gradient(
+    0deg,
+    rgba(253, 187, 45, 1) 0%,
+    rgba(34, 193, 195, 1) 100%
+  );
 }
+.memorygame__box:hover,
 .memorygame__box--active {
-  background-color: #ebd671;
-}
-.memorygame__box:hover {
-  background-color: #ebd671;
+  -webkit-box-shadow: 0px 1px 26px -1px rgb(192, 116, 255);
+  -moz-box-shadow: 0px 1px 26px -1px rgb(192, 116, 255);
+  box-shadow: 0px 1px 26px -1px rgb(192, 116, 255);
 }

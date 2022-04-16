@@ -3,24 +3,85 @@ import Container from "../../components/ui/layouts/Container";
 import Image from "../../components/ui/atoms/Image";
 import Text from "../../components/ui/atoms/Text";
 import classNames from "classnames";
+import styles from "./style.css";
+import Icon from "../../components/ui/atoms/Icon";
 
-const imgBasePath =
-  "https://camo.githubusercontent.com/932885e5602a4e8f8dc6d07e5d0ac057424ef75eef8d18faa4d5d235832a34d9/68747470733a2f2f692e696d6775722e636f6d2f38456b577948542e706e67f";
+const imgBasePath = "https://i.imgur.com/LKLKOEK.png";
 
 export interface ITopbar {}
 
+const cx = classNames.bind(styles);
+
 const Topbar = () => {
   return (
-    <Container className={classNames("flex", "justify-between")}>
-      <Container>
-        <Image src={imgBasePath} alt="logoMemoryze" />
+    <Container
+      className={classNames("flex", "justify-between", "h-100", cx("topbar"))}
+    >
+      <Container
+        padding={0}
+        className={classNames(
+          "flex",
+          "items-center",
+          "gap-1",
+          cx("topbar__brand")
+        )}
+      >
+        <Image
+          width="30px"
+          height="30px"
+          src={imgBasePath}
+          alt="logoMemoryze"
+        />
+        <Text
+          as="p"
+          weight={7}
+          className={classNames(cx("topbar__brandtitle"))}
+        >
+          MEMORYZE
+        </Text>
       </Container>
-      <Container className={classNames("flex", "justify-around", "gap-1")}>
-        <Container>
-          <Text as="p">Profile</Text>
+      <Container
+        padding={0}
+        className={classNames("flex", "justify-around", "gap-2")}
+      >
+      <Container
+        padding={0}
+        className={classNames(
+          "flex",
+          "justify-center",
+          "items-center",
+          "flex-col",
+        )}
+      >
+        <Icon id="hamburger" />
+      </Container>
+        <Container
+          padding={0}
+          className={classNames(
+            "flex",
+            "justify-center",
+            "items-center",
+            "flex-col",
+            cx("topbar__item")
+          )}
+        >
+          <Text as="p" weight={7} className={cx("topbar__text")}>
+            Profile
+          </Text>
         </Container>
-        <Container>
-          <Text as="p">Sign Out</Text>
+        <Container
+          padding={0}
+          className={classNames(
+            "flex",
+            "justify-center",
+            "items-center",
+            "flex-col",
+            cx("topbar__item")
+          )}
+        >
+          <Text as="p" weight={7}>
+            Sign Out
+          </Text>
         </Container>
       </Container>
     </Container>

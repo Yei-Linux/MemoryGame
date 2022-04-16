@@ -21,28 +21,31 @@ const ProgressInformation = ({
   const getStatus = () => {
     if (isPlaying) return "You are in the right way! 😄";
 
-    if (statusGame === 'playing') return "Start to play! 🙃";
+    if (statusGame === "playing") return "Start to play! 🙃";
 
-    if (statusGame === 'won') return "You just passed to next level! 🙃";
+    if (statusGame === "won") return "You just passed to next level! 🙃";
 
-    if (statusGame ==='wonAllLevels') return "You just won all levels! 🙃";
+    if (statusGame === "wonAllLevels") return "You just won all levels! 🙃";
 
     return "You lost 😌";
   };
 
   return (
     <Container
+      padding={0}
       className={classNames(cxIndex("flex", "justify-between", "items-center"))}
     >
-      <Container>
-        <Container className={classNames(cxIndex("flex", "items-center"))}>
-          <Text css={{ minWidth: "50px" }}>Status: </Text> &nbsp;{" "}
-          <Text as="strong" weight={5}>{getStatus()}</Text>
-        </Container>
-        <Container className={classNames(cxIndex("flex", "items-center"))}>
-          <Text css={{ minWidth: "50px" }}>Level: </Text>&nbsp;{" "}
-          <Text as="strong" weight={5}>{level + 1}</Text>
-        </Container>
+      <Container className={classNames(cxIndex("flex", "items-center"))}>
+        <Text css={{ minWidth: "50px" }}>Status: </Text> &nbsp;{" "}
+        <Text as="strong" weight={5}>
+          {getStatus()}
+        </Text>
+      </Container>
+      <Container className={classNames(cxIndex("flex", "items-center"))}>
+        <Text css={{ minWidth: "50px" }}>Level: </Text>&nbsp;{" "}
+        <Text as="strong" weight={5}>
+          {level + 1}
+        </Text>
       </Container>
     </Container>
   );

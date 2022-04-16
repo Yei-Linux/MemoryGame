@@ -1,6 +1,7 @@
 import React from "react";
 import MemoryGame from "../components/MemoryGame";
 import WelcomeStart from "../components/WelcomeStart";
+import WithLayout from "../hocs/WithLayout";
 
 const Home = (): JSX.Element => {
   return (
@@ -11,4 +12,4 @@ const Home = (): JSX.Element => {
   );
 };
 
-export default Home;
+export default WithLayout()(Home);

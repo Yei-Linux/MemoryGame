@@ -1,4 +1,12 @@
 .grid {
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
+}
+
+.grid--gap0 {
+  grid-gap: 0px;
+}
+
+.grid--gap1 {
+  grid-gap: 10px;
 }
